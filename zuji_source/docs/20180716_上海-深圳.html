@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <title>20180716_上海-深圳</title>
+        <meta name="keywords" content="xiaoxiyouran" />
+        <meta name="description" content="xiaoxiyouran's Docs" />
+        <link href="../packages/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../packages/css/style.css" rel="stylesheet" />
+        <link href="../packages/css/monokai_sublime.min.css" rel="stylesheet">
+
+        <!-- 右上角的侧边导航栏 -->
+        <link rel="stylesheet" href="../packages/hock_side_bar/css/sidebar.css"> <!--初始化文件-->
+        <script src="../packages/hock_side_bar/js/sidebar.js"></script> <!--rem适配js-->
+
+        <!--
+        <link href="<?php echo $base_url?>/css/bootstrap-theme.min.css" rel="stylesheet" />
+        -->
+
+        <!-- To generate the side tree of the document itself. -->
+  <link rel="stylesheet" href="../packages/generate_header_sidebar/css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <style>
+  body {
+  background-color: white;
+  margin:0; padding:0;
+  // text-align: center;
+  overflow: scroll;
+  }
+  div, p, table, th, td {
+    list-style:none;
+    margin:8px; padding:0;
+    color:#333; font-size:12px;
+   Font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, SimSun, “宋体”, Heiti, “黑体”, sans-serif;
+  }
+
+ // table{
+ //   border-collapse:collapse;
+ // }
+
+  //table, td, th{
+  //  border:1px solid black;
+  //}
+
+  .ztree li a.curSelectedNode {
+    padding-top: 0px;
+    background-color: #FFE6B0;
+    color: black;
+    height: 16px;
+    border: 1px #FFB951 solid;
+    opacity: 0.8;
+  }
+  .ztree{
+    overflow: auto;
+    height:100%;
+    min-height: 200px;
+    top: 0px;
+  }
+  </style>
+
+<!--
+  For Latex formula
+-->
+<!--
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\(","\)"]]}
+  });
+</script>
+-->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"]]}
+  });
+</script>
+ <script type="text/javascript" src="../packages/MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+<!-- mermaid 画图 -->
+ <link rel="stylesheet" href="../packages/mermaid-7.0.0/dist/mermaid.forest.css"/>
+ <script src="../packages/mermaid-7.0.0/dist/mermaid.js"></script>
+<!--  <script src="../packages/mermaid-7.0.0/dist/dist/mermaid.full.js"></script> -->
+ <!-- <scrpt src="../packages/mermaid-7.0.0/node_modules/d3/d3.js"></scrpt> -->
+ <!-- <script>mermaid.initialize({startOnLoad:true});</script>  -->
+ <script>
+        //browserify --entry src/mermaid.js -u d3 -o ./dist/mermaid.brow.slim.js
+                        var mermaid_config = {
+                                        startOnLoad:true
+                        }
+                        mermaid.ganttConfig = {
+                                        titleTopMargin:25,
+                                        barHeight:20,
+                                        barGap:4,
+                                        topPadding:50,
+                                        leftPadding:75,
+                                        gridLineStartPadding:35,
+                                        fontSize:11,
+                                        numberSectionStyles:3,
+                                        axisFormatter: [
+                                                        // Within a day
+                                                        ["%I:%M", function (d) {
+                                                                        return d.getHours();
+                                                        }],
+                                                        // Monday a week
+                                                        ["w. %U", function (d) {
+                                                                        return d.getDay() == 1;
+                                                        }],
+                                                        // Day within a week (not monday)
+                                                        ["%a %d", function (d) {
+                                                                        return d.getDay() && d.getDate() != 1;
+                                                        }],
+                                                        // within a month
+                                                        ["%b %d", function (d) {
+                                                                        return d.getDate() != 1;
+                                                        }],
+                                                        // Month
+                                                        ["%m-%y", function (d) {
+                                                                        return d.getMonth();
+                                                        }]
+                                        ]
+                        };
+        </script>
+
+</head>
+<body>
+<!-- 右上角的悬浮 sidebar  -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <a href="#"> 目录 </a>
+   <iframe id="ha" src=" global_sidebar.html" name='left' frameborder="0" scrolling="auto" width="400"  height="100%">
+    您的浏览器不支持iframe，请升级
+   </iframe>
+</div>
+
+<TABLE border=0 height=600px align=left>
+  <TR>
+    <TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+      <ul id="tree" class="ztree">
+
+      </ul>
+    </TD>
+    <TD width=770px align=left valign=top>
+
+<!---------------------------------------------------------------------------------------------------------------------------->
+<div class="container">
+<span style="font-size:20px;cursor:pointer;z-index: 9999; position: fixed; right: 0px; top: 0px;" onclick="openNav()">&#9776; 目录</span>
+
+<p>20180716-上海–深圳</p>
+<p>从2018.07.01深圳鹅厂入职到今天，历时将近一个月，期间来来往往3次有余，有点身心俱疲。很感怀五一的时候努力面试，从忐忑失落到最后拿到offer。确实感谢胡总，余总，能给我这次机会，也很开心能在那里认识不少具有爱心的同事们，能一起谈天说地的龙哥和许总，他们诚恳而热情，总会在无意间为我付出很多。谢谢你们。</p>
+<p>生活啊，总是像围城，外面的人想进去，里面的人想出来。她因为好奇和未知而让人冲动，也许因为这样或者那样的原因，而因此变的蜿蜒曲折，有惊喜也有惊吓和无奈。她就像一个初恋的少女期待男友，怕他不来，又怕他乱来。沿途看过太多的景，见过太多的人，有点累，也幻想着有那么一刻能安心停下来，去想象在这个不曾相识的站台，也许，某位诗人曾驻足，也许，关乎这个城市那不可一世的故事令人遐想。一阵嘘噫，斜斜的日光透露着时光的无奈和沧桑，她是永恒，奈何生有始，死有终。不舍人间千百事，怎奈红尘染白发。可能在这一刻，我想飞出窗外，坐在树梢看夕阳西下，那是我梦寐以求的梦想和生活啊，可是不知这辆车是时光，是成长，是责任，是爱与恨，是那不随你我的客观拉着你远行，留下的，弹指间的空隙随青丝游离，我看着她，风吹过的水珠格外晶莹。</p>
+<p>经年的颠沛流离，一如“问汝平生功业，黄州惠州瞻州”，每个人都在争渡。我无权过问他们的方向，抑或无法了解他们的全部，目送他们远去，而我的驻足，多少有些苍凉无奈。可能，作为生命的看客，多少有点可怜和孤寂。于是，他也开始了他漫无目的的征程。“我从哪里来，又要到哪里去”，这个问题真的好难，自从呱呱坠地的那声嚎叫就道出了此生的无助。</p>
+<p>“人生啊”，已成每天的口头禅。给自己立一个目标，停下来，一盏茶，一根鱼竿，不闻道，夕可死矣。愿你永远微笑面对生之艰辛，死之苦恼。有爱有恨，有泪可落，不觉悲凉。</p>
+<p>2818/07/26  p10.27.16s 晴</p>
+<p>​                                                                                                                文: 夕若幽兰</p>
+
+
+<hr/>
+<div class="footer">
+        Copyright &copy; xiaoxiyouran. All rights reserved.
+
+</div>
+
+</div> <!-- /container -->
+
+<!---------------------------------------------------------------------------------------------------------------------------->
+
+        </TD>
+  </TR>
+</TABLE>
+
+<!-- 请注意，以下两个部分的代码执行是有顺序的，必须严格按照这个顺序来。另外，放在底部是为了优化界面，使加载速度更快 -->
+<!-- 为了优化代码风格 -->
+<script src="../packages/js/jquery-1.9.1.min.js" ></script>
+<script src="../packages/js/bootstrap.min.js" ></script>
+<script src="../packages/js/highlight.min.js" ></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+<!-- 以下是为了生成文档的侧边栏 -->
+<script type="text/javascript" src="../packages/generate_header_sidebar/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../packages/generate_header_sidebar/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="../packages/generate_header_sidebar/src/ztree_toc.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+  $('#tree').ztree_toc({
+    is_auto_number : true,
+    use_head_anchor: true
+  });
+});
+//-->
+</SCRIPT>
+
+</body>
+</html>
+    
