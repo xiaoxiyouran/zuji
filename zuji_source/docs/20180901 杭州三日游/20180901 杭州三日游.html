@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <title>20180901 杭州三日游</title>
+        <meta name="keywords" content="xiaoxiyouran" />
+        <meta name="description" content="xiaoxiyouran's Docs" />
+        <link href="../../packages/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../../packages/css/style.css" rel="stylesheet" />
+        <link href="../../packages/css/monokai_sublime.min.css" rel="stylesheet">
+
+        <!-- 右上角的侧边导航栏 -->
+        <link rel="stylesheet" href="../../packages/hock_side_bar/css/sidebar.css"> <!--初始化文件-->
+        <script src="../../packages/hock_side_bar/js/sidebar.js"></script> <!--rem适配js-->
+
+        <!--
+        <link href="<?php echo $base_url?>/css/bootstrap-theme.min.css" rel="stylesheet" />
+        -->
+
+        <!-- To generate the side tree of the document itself. -->
+  <link rel="stylesheet" href="../../packages/generate_header_sidebar/css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <style>
+  body {
+  background-color: white;
+  margin:0; padding:0;
+  // text-align: center;
+  overflow: scroll;
+  }
+  div, p, table, th, td {
+    list-style:none;
+    margin:8px; padding:0;
+    color:#333; font-size:12px;
+   Font-family: Helvetica, Tahoma, Arial, STXihei, “华文细黑”, “Microsoft YaHei”, “微软雅黑”, SimSun, “宋体”, Heiti, “黑体”, sans-serif;
+  }
+
+ // table{
+ //   border-collapse:collapse;
+ // }
+
+  //table, td, th{
+  //  border:1px solid black;
+  //}
+
+  .ztree li a.curSelectedNode {
+    padding-top: 0px;
+    background-color: #FFE6B0;
+    color: black;
+    height: 16px;
+    border: 1px #FFB951 solid;
+    opacity: 0.8;
+  }
+  .ztree{
+    overflow: auto;
+    height:100%;
+    min-height: 200px;
+    top: 0px;
+  }
+  </style>
+
+<!--
+  For Latex formula
+-->
+<!--
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\(","\)"]]}
+  });
+</script>
+-->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"]]}
+  });
+</script>
+ <script type="text/javascript" src="../../packages/MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+<!-- mermaid 画图 -->
+ <link rel="stylesheet" href="../../packages/mermaid-7.0.0/dist/mermaid.forest.css"/>
+ <script src="../../packages/mermaid-7.0.0/dist/mermaid.js"></script>
+<!--  <script src="../../packages/mermaid-7.0.0/dist/dist/mermaid.full.js"></script> -->
+ <!-- <scrpt src="../../packages/mermaid-7.0.0/node_modules/d3/d3.js"></scrpt> -->
+ <!-- <script>mermaid.initialize({startOnLoad:true});</script>  -->
+ <script>
+        //browserify --entry src/mermaid.js -u d3 -o ./dist/mermaid.brow.slim.js
+                        var mermaid_config = {
+                                        startOnLoad:true
+                        }
+                        mermaid.ganttConfig = {
+                                        titleTopMargin:25,
+                                        barHeight:20,
+                                        barGap:4,
+                                        topPadding:50,
+                                        leftPadding:75,
+                                        gridLineStartPadding:35,
+                                        fontSize:11,
+                                        numberSectionStyles:3,
+                                        axisFormatter: [
+                                                        // Within a day
+                                                        ["%I:%M", function (d) {
+                                                                        return d.getHours();
+                                                        }],
+                                                        // Monday a week
+                                                        ["w. %U", function (d) {
+                                                                        return d.getDay() == 1;
+                                                        }],
+                                                        // Day within a week (not monday)
+                                                        ["%a %d", function (d) {
+                                                                        return d.getDay() && d.getDate() != 1;
+                                                        }],
+                                                        // within a month
+                                                        ["%b %d", function (d) {
+                                                                        return d.getDate() != 1;
+                                                        }],
+                                                        // Month
+                                                        ["%m-%y", function (d) {
+                                                                        return d.getMonth();
+                                                        }]
+                                        ]
+                        };
+        </script>
+
+</head>
+<body>
+<!-- 右上角的悬浮 sidebar  -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <a href="#"> 目录 </a>
+   <iframe id="ha" src=" global_sidebar.html" name='left' frameborder="0" scrolling="auto" width="400"  height="100%">
+    您的浏览器不支持iframe，请升级
+   </iframe>
+</div>
+
+<TABLE border=0 height=600px align=left>
+  <TR>
+    <TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+      <ul id="tree" class="ztree">
+
+      </ul>
+    </TD>
+    <TD width=770px align=left valign=top>
+
+<!---------------------------------------------------------------------------------------------------------------------------->
+<div class="container">
+<span style="font-size:20px;cursor:pointer;z-index: 9999; position: fixed; right: 0px; top: 0px;" onclick="openNav()">&#9776; 目录</span>
+
+<h1 id="20180901">20180901 杭州三日游</h1>
+<p>旅行行程如下: 2018.08.31~2019.09.02(杭州三日游)</p>
+<p>住的在河坊街空山旅社，住宿条件很不错，还挨着河坊街。  就是多订了不能退，最好一天一续。</p>
+<p>2018.08.31， 网易算法岗面试(英飞特大厦);</p>
+<p>2018.09.01， 西湖~黄泥岭(这个地方不错) ~灵隐寺(游2) ~ 浙大玉泉校区~清河坊，南宋御街~亲戚家;</p>
+<p>2018.09.02， 返程。</p>
+<p>应该是第二次来杭州辣，怎么说呢，树木榆葱的小菇娘，感觉有点小清新，可能因为城市架构以山为岚，以湖为丫，绿化做的很好。该去的地方都去了(作为一个外地人来讲)，毕竟有很多有情趣的小地方，只有时间久了，都去涉足，不用规划行程才能体会呢。 </p>
+<p>早上6点赶车，总有一种愿望让你失望撑起迷迷的小眼，记得面试的时候，特别是从早上等到了下午五点的时候，邂逅了一只漂亮的hr小姐姐，小鹿乱撞...  不停的揉眼睛，捂脸，掩饰我此刻的困意。每每触动的笑点， 真是太坏了，好像姐姐已经订婚了。现在只记得最后一个问题，“可以帮助一下单身狗嘛”，卡哇伊ฅฅ*姐姐笑翻了，艾玛，“这个找hr姐姐，后面靠你了....” 看到很多来自遥远的川府，又在中途远离，我是幸运的，能一直坚守到最后。 无论如何，我都爱音乐，只因音乐评论每个人都是一本故事，而我喜欢和有故事的人做朋友。就如每个在抖音里混的都是人才，meee，又免费打广告了。</p>
+<p>第二天在杭州旅行，熟悉的景，不同的时空，不样的心情，特别是那个年轻的小阿姨，让我帮忙给她拍雷峰塔的皂片，她好像心灵慧通，打开相册，告诉我应该拍成这样子的，“要把塔拍的和头一样高”，“脚底下不要留空白”，瞬间觉得书白读了，一度怀疑以前有个菇娘夸我皂片拍的好看，如今才觉悟，不是皂片好看，是人家漂亮啊。Ben~  最后总结一句吧，杭州不是湖就是寺庙，灵隐寺那边(三天竺)，中天竺，上天竺，全是庙哇啊。orz....</p>
+<p>特别吐槽的一句，差点把手机丢在灵隐寺，不得不说，有佛的地方，邪祟皆避。心诚则灵，佛祖心中留，嗯。</p>
+<p>特别鸣谢浙大的Mark机械Doctor的热情招待，还有小表哥，大表哥的盛情款待，大晚上跑出去给我买牙膏，走的时候给我买水，把我送到终点站，每笔账算的那么细，勤劳爱干净。瞬间觉得学习了，大智若愚，心细如发。</p>
+<p>夕若幽兰</p>
+<p>2018.09.02</p>
+
+
+<hr/>
+<div class="footer">
+        Copyright &copy; xiaoxiyouran. All rights reserved.
+
+</div>
+
+</div> <!-- /container -->
+
+<!---------------------------------------------------------------------------------------------------------------------------->
+
+        </TD>
+  </TR>
+</TABLE>
+
+<!-- 请注意，以下两个部分的代码执行是有顺序的，必须严格按照这个顺序来。另外，放在底部是为了优化界面，使加载速度更快 -->
+<!-- 为了优化代码风格 -->
+<script src="../../packages/js/jquery-1.9.1.min.js" ></script>
+<script src="../../packages/js/bootstrap.min.js" ></script>
+<script src="../../packages/js/highlight.min.js" ></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+<!-- 以下是为了生成文档的侧边栏 -->
+<script type="text/javascript" src="../../packages/generate_header_sidebar/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="../../packages/generate_header_sidebar/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript" src="../../packages/generate_header_sidebar/src/ztree_toc.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+  $('#tree').ztree_toc({
+    is_auto_number : true,
+    use_head_anchor: true
+  });
+});
+//-->
+</SCRIPT>
+
+</body>
+</html>
+    
